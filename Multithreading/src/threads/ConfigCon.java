@@ -13,12 +13,14 @@ public class ConfigCon {
 	public String getMode() throws IOException {
 		
 		String Mode = null;
-		
+				
 		Properties config = new Properties();
 		
 		FileInputStream file;
 		
-		String path = directoryPath.getParent().toString() + "\\config.properties";
+		String path = directoryPath.getParent().toString() + "/config.properties";
+		
+		Main.logger.debug("trying to get the Mode in the config file in path: " + path);
 		
 		file = new FileInputStream(path);
 		
@@ -40,7 +42,9 @@ public class ConfigCon {
 		
 		FileInputStream file;
 		
-		String path = directoryPath.getParent().toString() + "\\config.properties";
+		String path = directoryPath.getParent().toString() + "/config.properties";
+		
+		Main.logger.debug("trying to get the Threadcount in the config file in path: " + path);
 		
 		file = new FileInputStream(path);
 		
